@@ -24,16 +24,22 @@
   <body ng-app="starter">
   <ion-side-menus>
     <ion-side-menu-content>
-      <ion-nav-bar class="bar-stable">
+      <ion-nav-bar class="bar-royal">
+        <!-- left side menu button-->
         <ion-nav-buttons side="left">
           <button menu-toggle="left" class="button button-icon button-clear ion-navicon"></button>
         </ion-nav-buttons>
         <ion-nav-back-button></ion-nav-back-button>
+        <!-- right side menu button-->
+        <ion-nav-buttons side="right">
+          <button menu-toggle="right" class="button button-icon button-clear ion-ios-chatbubble"></button>
+        </ion-nav-buttons>
       </ion-nav-bar>
       <ion-nav-view></ion-nav-view>
     </ion-side-menu-content>
+    <!-- left side menu-->
     <ion-side-menu side="left">
-      <ion-header-bar class="bar-stable">
+      <ion-header-bar class="bar-balanced">
         <h1 class="title">Menu</h1>
       </ion-header-bar>
       <ion-content>
@@ -41,6 +47,15 @@
           <ion-item menu-close href="#/home">Home</ion-item>
           <ion-item menu-close href="#/settings">Settings</ion-item>
         </ion-list>
+      </ion-content>
+    </ion-side-menu>
+    <!-- right side menu-->
+    <ion-side-menu side="right">
+      <ion-header-bar class="bar-energized">
+        <h1 class="title">Chat</h1>
+      </ion-header-bar>
+      <ion-content class="padding">
+        <p>No more messages.</p>
       </ion-content>
     </ion-side-menu>
   </ion-side-menus>
