@@ -3,7 +3,8 @@ var app = angular.module('starter', ['ionic']);
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
     url: '/home',
-    templateUrl: 'templates/home.html'
+    templateUrl: 'templates/home.html',
+    controller: 'SideCtrl'
   });
   $stateProvider.state('details', {
     url: '/details',
@@ -14,6 +15,28 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/settings.html'
   });
   $urlRouterProvider.otherwise('/home');
+});
+
+
+app.controller('SideCtrl', function($scope, $ionicSideMenuDelegate) {
+
+  
+  var i = true ;
+
+  $scope.toggleSideMenuLeft = function() {
+      //$ionicSideMenuDelegate.toggleLeft();
+        
+      if(i) {
+        $("ion-header-bar .ion-navicon").css("display", "none");
+      } else {
+        $("ion-header-bar .ion-navicon").css("display", "block");
+      }
+      i = !i ;
+
+      $ionicSideMenuDelegate.canDragContent(false);
+      // $("ion-side-menu-content").attr("drag-content", false);
+
+  }
 });
 
 app.run(function($ionicPlatform) {

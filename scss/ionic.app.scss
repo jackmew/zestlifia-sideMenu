@@ -13,7 +13,10 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-*/
+*/					
+$base-background-color:           rgb(23, 29, 37) !default;
+$base-color:                      #000 !default;				
+$font-family-sans-serif: 		  "Comic Sans MS", "Roboto", "Segoe UI", sans-serif !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
